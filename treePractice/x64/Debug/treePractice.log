@@ -1,4 +1,10 @@
 ﻿  treePractice.c
-C:\Users\PC\source\repos\treePractice\treePractice\treePractice.c(26,18): warning C4133: '=': incompatible types - from 'Node *' to 'Node *'
-C:\Users\PC\source\repos\treePractice\treePractice\treePractice.c(33,14): warning C4133: '=': incompatible types - from 'Node *' to 'Node *'
+C:\Users\PC\source\repos\treePractice\treePractice\treePractice.c(24,32): warning C4133: 'function': incompatible types - from 'Node *' to 'Node *'
+C:\Users\PC\source\repos\treePractice\treePractice\treePractice.c(24,15): warning C4133: '=': incompatible types - from 'Node *' to 'Node *'
+C:\Users\PC\source\repos\treePractice\treePractice\treePractice.c(27,33): warning C4133: 'function': incompatible types - from 'Node *' to 'Node *'
+C:\Users\PC\source\repos\treePractice\treePractice\treePractice.c(27,16): warning C4133: '=': incompatible types - from 'Node *' to 'Node *'
+C:\Users\PC\source\repos\treePractice\treePractice\treePractice.c(38,25): warning C4133: 'function': incompatible types - from 'Node *' to 'Node *'
+C:\Users\PC\source\repos\treePractice\treePractice\treePractice.c(41,25): warning C4133: 'function': incompatible types - from 'Node *' to 'Node *'
+C:\Users\PC\source\repos\treePractice\treePractice\treePractice.c(55,17): warning C4133: 'function': incompatible types - from 'Node *' to 'Node *'
+C:\Users\PC\source\repos\treePractice\treePractice\treePractice.c(58,17): warning C4133: 'function': incompatible types - from 'Node *' to 'Node *'
   treePractice.vcxproj -> C:\Users\PC\source\repos\treePractice\x64\Debug\treePractice.exe

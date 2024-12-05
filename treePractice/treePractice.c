@@ -2,58 +2,72 @@
 #include <stdlib.h>
 
 typedef struct {
-	char data;
-	struct Node* next;
+	int data;
+	struct Node* right;
+	struct Node* left;
 }Node;
 
-typedef struct {
-	Node* front;
-	Node* end;
-}Queue;
-
-void initQueue(Queue* list) {
-	list->front = NULL;
-	list->end = NULL;
-}
-
-void enqueue(Queue* list,char data) {
-	Node* newNode = (Node*)malloc(sizeof(Node));
+Node* createNode(int data) {
+	Node* newNode = malloc(sizeof(Node));
+	newNode->left = NULL;
+	newNode->right = NULL;
 	newNode->data = data;
-	if (list->front == NULL && list->end == NULL) {
-		list->front = newNode;
-		list->end = newNode;
+	return newNode;
+}
+
+Node* insertNode(Node* root, int data) {
+	if (root == NULL) {
+		return createNode(data);
 	}
-	list->end->next = newNode;
-	list->end = newNode;
-
+	else {
+		if (data < root->data) {
+			root->left = insertNode(root->left, data);
+		}
+		else if (data > root->data) {
+			root->right = insertNode(root->right, data);
+		}
+	}
+	return root;
 }
 
-void dequeue(Queue* list) {
-	Node* temp = list->front;
-	list->front = list->front->next;
-	char result = temp->data;
-	free(temp);
+Node* searchNode(Node* root, int data) {
+	if (root == NULL || root->data == data) {
+		return root;
+	}
+	else if (data < root->data) {
+		return searchNode(root->left, data);
+	}
+	else {
+		return searchNode(root->right, data);
+	}
 }
 
-void printHelloQueue() {
-	//arrange
-	Queue s;
-
-	initQueue(&s);
-
-	enqueue(&s, 'h');
-	enqueue(&s, 'e');
-	enqueue(&s, 'l');
-	enqueue(&s, 'l');
-	enqueue(&s, 'o');
-
-
+void printTree(Node* root, int data) {
+	if (root == NULL) {
+		printf("Data %d not found in the tree.\n", data);
+		return;
+	}
+	if (root->data == data) {
+		printf("%d",data);
+		return;
+	}
+	else if (data < root->data) {
+		printTree(root->left, data);
+	}
+	else if (data > root->data) {
+		printTree(root->right, data);
+	}
 	return;
 }
+
 int main() {
+	Node* root = NULL;
+	root = insertNode(root, 50);
+	insertNode(root, 40);
+	insertNode(root, 10);
+	insertNode(root, 60);
 
-	printHelloQueue();
-
+	printTree(root, 10);
 
 	return 0;
 }
