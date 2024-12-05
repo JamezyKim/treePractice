@@ -3,8 +3,10 @@ C:\Users\PC\source\repos\treePractice\treePractice\treePractice.c(24,32): warnin
 C:\Users\PC\source\repos\treePractice\treePractice\treePractice.c(24,15): warning C4133: '=': incompatible types - from 'Node *' to 'Node *'
 C:\Users\PC\source\repos\treePractice\treePractice\treePractice.c(27,33): warning C4133: 'function': incompatible types - from 'Node *' to 'Node *'
 C:\Users\PC\source\repos\treePractice\treePractice\treePractice.c(27,16): warning C4133: '=': incompatible types - from 'Node *' to 'Node *'
-C:\Users\PC\source\repos\treePractice\treePractice\treePractice.c(38,25): warning C4133: 'function': incompatible types - from 'Node *' to 'Node *'
-C:\Users\PC\source\repos\treePractice\treePractice\treePractice.c(41,25): warning C4133: 'function': incompatible types - from 'Node *' to 'Node *'
-C:\Users\PC\source\repos\treePractice\treePractice\treePractice.c(55,17): warning C4133: 'function': incompatible types - from 'Node *' to 'Node *'
-C:\Users\PC\source\repos\treePractice\treePractice\treePractice.c(58,17): warning C4133: 'function': incompatible types - from 'Node *' to 'Node *'
+C:\Users\PC\source\repos\treePractice\treePractice\treePractice.c(40,3): warning C4033: 'searchNode' must return a value
+C:\Users\PC\source\repos\treePractice\treePractice\treePractice.c(43,25): warning C4133: 'function': incompatible types - from 'Node *' to 'Node *'
+C:\Users\PC\source\repos\treePractice\treePractice\treePractice.c(46,25): warning C4133: 'function': incompatible types - from 'Node *' to 'Node *'
+C:\Users\PC\source\repos\treePractice\treePractice\treePractice.c(54,16): warning C4133: 'function': incompatible types - from 'Node *' to 'Node *'
+C:\Users\PC\source\repos\treePractice\treePractice\treePractice.c(56,16): warning C4133: 'function': incompatible types - from 'Node *' to 'Node *'
+C:\Users\PC\source\repos\treePractice\treePractice\treePractice.c(48,1): warning C4715: 'searchNode': not all control paths return a value
   treePractice.vcxproj -> C:\Users\PC\source\repos\treePractice\x64\Debug\treePractice.exe

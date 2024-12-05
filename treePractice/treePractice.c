@@ -31,8 +31,13 @@ Node* insertNode(Node* root, int data) {
 }
 
 Node* searchNode(Node* root, int data) {
-	if (root == NULL || root->data == data) {
+	if (root == NULL) {
+		printf("Data %d does not exist in the tree.\n", data);
 		return root;
+	}
+	if (root->data == data) {
+		printf("%d", data);
+		return;
 	}
 	else if (data < root->data) {
 		return searchNode(root->left, data);
@@ -42,32 +47,26 @@ Node* searchNode(Node* root, int data) {
 	}
 }
 
-void printTree(Node* root, int data) {
+void printTree(Node* root) {
 	if (root == NULL) {
-		printf("Data %d not found in the tree.\n", data);
 		return;
 	}
-	if (root->data == data) {
-		printf("%d",data);
-		return;
-	}
-	else if (data < root->data) {
-		printTree(root->left, data);
-	}
-	else if (data > root->data) {
-		printTree(root->right, data);
-	}
+	printTree(root->left);
+	printf("%d ", root->data);
+	printTree(root->right);
 	return;
 }
 
 int main() {
 	Node* root = NULL;
+	
 	root = insertNode(root, 50);
 	insertNode(root, 40);
 	insertNode(root, 10);
 	insertNode(root, 60);
 
-	printTree(root, 10);
+	//searchNode(root, 10);
+	printTree(root);
 
 	return 0;
 }
